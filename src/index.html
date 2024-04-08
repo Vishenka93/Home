@@ -3,9 +3,360 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My App</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <title>Home</title>
     </head>
     <body>
-        <div id="root"></div>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <a href="" class="header__logo">
+                        <img src="assets/img/logo.jpeg" alt="logo" />
+                    </a>
+                    <nav class="header__menu">
+                        <ul class="header__items">
+                            <li class="header__item">
+                                <a href="index.html" class="header__link"
+                                    >ГЛАВНАЯ</a
+                                >
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">ГАЛЕРЕЯ</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="pro-1.html" class="header__link"
+                                    >ПРОЕКТЫ</a
+                                >
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">СЕРТИФИКАТЫ</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">КОНТАКТЫ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button type="button" class="menu__burger burger-menu">
+                        <span></span>
+                    </button>
+                </div>
+            </header>
+            <main class="page">
+                <section class="page-home">
+                    <div class="page-home__container">
+                        <div class="page-home__content">
+                            <h1 class="page-home__title">
+                                PROJECT <span>HOME</span>
+                            </h1>
+
+                            <div class="page-home__nav">
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                                <div class="swiper-button-next">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="page-home__slide-info">
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="page-home__swiper">
+                            <div class="swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="assets/img/build.jpeg"
+                                            alt="image"
+                                        />
+                                        <a href="">
+                                            <span>ВЗГЛЯНУТЬ</span>
+                                            <i
+                                                class="fa-solid fa-arrow-right"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <img
+                                            src="assets/img/build.jpeg"
+                                            alt="image"
+                                        />
+                                        <a href="">
+                                            <span>ВЗГЛЯНУТЬ</span>
+                                            <i
+                                                class="fa-solid fa-arrow-right"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page-about">
+                    <div class="page-about__container">
+                        <div class="page-about__left">
+                            <div class="page-about__top">
+                                <img src="assets/img/about1.jpeg" alt="image" />
+                            </div>
+                            <div class="page-about__bottom">
+                                <img src="assets/img/about2.jpeg" alt="image" />
+                            </div>
+                        </div>
+                        <div class="page-about__middle">
+                            <img src="assets/img/about3.jpeg" alt="image" />
+                        </div>
+                        <div class="page-about__content">
+                            <h2 class="page-about__title">О компании</h2>
+                            <p class="page-about__text">
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since
+                                the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting,
+                                remaining essentially unchanged.
+                            </p>
+                            <a href="" class="page-about__link">
+                                <span>ЧИТАТЬ</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="page-tasks">
+                    <div class="page-tasks__container">
+                        <h2 class="page-tasks__title">Основные задачи</h2>
+                        <div class="page-tasks__body">
+                            <div class="page-tasks__left">
+                                <p class="page-tasks__number">1</p>
+                                <p class="page-tasks__text">
+                                    Создание комфортных условий и повышение
+                                    качества обслуживания клиентов
+                                </p>
+                            </div>
+                            <div class="page-tasks__right">
+                                <p class="page-tasks__number">2</p>
+                                <p class="page-tasks__text-2">
+                                    Постоянно совершенствовать качество
+                                    предоставляемых услуг путем обучения
+                                    персонала, закупки нового оборудования и
+                                    усиленной рекламы на рынке
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="page-projects">
+                    <div class="page-projects__container">
+                        <h2 class="page-projects__title">Наши проекты</h2>
+                        <div class="page-projects__top">
+                            <div class="page-projects__top-left">
+                                <img src="assets/img/01.jpeg" alt="image" />
+                                <div class="page-projects__info">
+                                    <h3 class="page-projects__info-title">
+                                        ДОСУГОВЫЙ ЦЕНТР
+                                    </h3>
+                                    <a href="" class="page-projects__info-link">
+                                        <span>ПОДРОБНЕЕ</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="page-projects__top-right">
+                                <img src="assets/img/02.jpeg" alt="image" />
+                                <div class="page-projects__info">
+                                    <h3 class="page-projects__info-title">
+                                        ТЕАТР
+                                    </h3>
+                                    <a href="" class="page-projects__info-link">
+                                        <span>ПОДРОБНЕЕ</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-projects__bottom">
+                            <div class="page-projects__bottom-left">
+                                <img src="assets/img/03.jpeg" alt="image" />
+                                <div class="page-projects__info-small">
+                                    <h3 class="page-projects__info-title">
+                                        СПОРТ
+                                    </h3>
+                                    <a href="" class="page-projects__info-link">
+                                        <span>ПОДРОБНЕЕ</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="page-projects__bottom-middle">
+                                <img src="assets/img/04.jpeg" alt="image" />
+                                <div class="page-projects__info">
+                                    <h3 class="page-projects__info-title">
+                                        ЧИСТОТА
+                                    </h3>
+                                    <a href="" class="page-projects__info-link">
+                                        <span>ПОДРОБНЕЕ</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="page-projects__bottom-right">
+                                <img src="assets/img/05.jpeg" alt="image" />
+                                <div class="page-projects__info">
+                                    <h3 class="page-projects__info-title">
+                                        ПАРК
+                                    </h3>
+                                    <a href="" class="page-projects__info-link">
+                                        <span>ПОДРОБНЕЕ</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page-projects__all-link">
+                            <a href="" class="page-projects__all">
+                                <span>ВСЕ ПРОЕКТЫ</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section class="page-contacts">
+                    <div class="page-contacts__container">
+                        <h2 class="page-contacts__title">Связаться с нами</h2>
+                        <div class="page-contacts__body">
+                            <form
+                                action="#"
+                                id="form"
+                                class="page-contacts__form"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Имя"
+                                    name="name"
+                                    class="page-contacts__input req"
+                                />
+                                <input
+                                    placeholder="Номер телефона"
+                                    type="tel"
+                                    name="tel"
+                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                    class="page-contacts__input req"
+                                />
+                                <input
+                                    placeholder="E-mail"
+                                    type="email"
+                                    name="email"
+                                    class="page-contacts__input req email"
+                                />
+                                <input
+                                    placeholder="Интересующие товар/услуга"
+                                    type="text"
+                                    name="text"
+                                    class="page-contacts__input"
+                                />
+                                <textarea
+                                    placeholder="Сообщение"
+                                    name="message"
+                                    id=""
+                                    cols="30"
+                                    rows="10"
+                                    class="page-contacts__input req"
+                                ></textarea>
+                                <p class="page-contacts__text">
+                                    Отправляя заявку Вы соглашаетесь с политикой
+                                    конфиденциальности
+                                </p>
+                                <button
+                                    type="submit"
+                                    class="page-contacts__button"
+                                >
+                                    <span>ОТПРАВИТЬ</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </form>
+                            <div class="page-contacts__image">
+                                <img src="assets/img/form1.jpeg" alt="image" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="footer__container">
+                    <div class="footer__body">
+                        <a href="" class="footer__logo">
+                            <img src="assets/img/footerlogo.svg" alt="logo" />
+                        </a>
+                        <ul class="footer__info">
+                            <h3>Информация</h3>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Галерея</a></li>
+                            <li><a href="#">Проекты</a></li>
+                            <li><a href="#">Сертификаты</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <ul class="footer__contacts">
+                            <h3>Контакты</h3>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href=""
+                                    >100000, Республика Казахстан, г. Караганда,
+                                    ул. Телевизионная 10</a
+                                >
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+380000000000 "
+                                    >+38 (000) 000 00 00</a
+                                >
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-envelope"></i>
+                                <a href="mailto:mail@gmail.com"
+                                    >mail@gmail.com</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="footer__social">
+                            <h3>Социальные сети</h3>
+                            <div>
+                                <a href=""
+                                    ><i class="fa-brands fa-facebook"></i
+                                ></a>
+                                <a href=""
+                                    ><i class="fa-brands fa-twitter"></i
+                                ></a>
+                                <a href=""
+                                    ><i class="fa-brands fa-linkedin"></i
+                                ></a>
+                                <a href=""
+                                    ><i class="fa-brands fa-pinterest-p"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__copy">
+                        © 2019 Digital Project. Все права защищены.
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script
+            src="https://kit.fontawesome.com/39b7c8a454.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="index.js"></script>
     </body>
 </html>

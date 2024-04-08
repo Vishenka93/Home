@@ -1,0 +1,149 @@
+@import "./base.scss";
+.footer {
+    background: rgb(44, 44, 44);
+    padding-top: 58px;
+    padding-bottom: 24px;
+
+    &__container {
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 60px;
+
+        @media (max-width: $mobile) {
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-bottom: 20px;
+        }
+        h3 {
+            @include titleAndLogo($fz16, $fw700, $colorWhite);
+            margin-bottom: 25px;
+        }
+        a {
+            @include titleAndLogo($fz14, $fw500, $colorWhite);
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__logo {
+        margin-right: 105px;
+        order: 1;
+        @media (max-width: $mobile) {
+            margin-right: 5px;
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-right: 57px;
+        order: 2;
+        li {
+            margin-bottom: 16px;
+        }
+        @media (max-width: $mobile) {
+            flex: 0 1 25%;
+            margin-right: 0px;
+        }
+    }
+
+    &__contacts {
+        order: 3;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        @media (max-width: $tablet) {
+            max-width: 200px;
+        }
+        @media (max-width: $mobile) {
+            flex: 1 1 100%;
+            order: 4;
+            max-width: 100%;
+        }
+        i {
+            padding-right: 14px;
+        }
+        li {
+            display: flex;
+            margin-bottom: 33px;
+        }
+    }
+
+    &__social {
+        order: 4;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $mobile) {
+            flex: 0 1 30%;
+            order: 3;
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 0 1 50%;
+        }
+
+        h3 {
+            @media (max-width: $mobileSmall) {
+                text-align: center;
+            }
+        }
+        div {
+            display: flex;
+            gap: 41px;
+            @media (max-width: $tablet) {
+                flex-direction: column;
+                gap: 21px;
+                align-items: center;
+            }
+            @media (max-width: $mobile) {
+                //  align-items: start;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            @media (max-width: $mobileSmall) {
+                flex-direction: column;
+                //  justify-content: center;
+            }
+
+            a {
+                :hover {
+                    transition: all 0.3s ease 0s;
+                    color: rgb(173, 216, 230);
+                }
+            }
+        }
+    }
+
+    &__copy {
+        text-align: center;
+
+        @include titleAndLogo($fz12, $fw400, $colorGrey4);
+
+        .fa-solid {
+            font-size: 24px;
+        }
+    }
+}
+.fa-solid {
+}
+.fa-location-dot {
+    color: $colorWhite;
+}
+.fa-phone {
+    color: $colorWhite;
+}
+.fa-regular {
+    color: $colorWhite;
+}
+
+.fa-brands {
+    font-size: 20px;
+}

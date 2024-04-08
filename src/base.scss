@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "tt_hoves";
+    src: url("../src/assets/fonts/tt-hoves-regular-webfont.woff2")
+            format("woff2"),
+        url("../src/assets/fonts/tt-hoves-regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "tt_hoves";
+    src: url("../src/assets/fonts/tt-hoves-light-webfont.woff2") format("woff2"),
+        url("../src/assets/fonts/tt-hoves-light-webfont.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "tt_hoves";
+    src: url("../src/assets/fonts/tt-hoves-bold-webfont.woff2") format("woff2"),
+        url("../src/assets/fonts/tt-hoves-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+input,
+textarea,
+form {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1;
+    font-family: "tt_hoves";
+    color: rgb(106, 106, 106);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+._block {
+    overflow: hidden;
+}
+
+[class*="__container"] {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+._ibg {
+    position: relative;
+}
+._ibg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.page {
+    flex: 1 1 auto;
+}
+
+/*                media                      */
+$tablet: 991.98px;
+$mobile: 767.98px;
+$mobileSmall: 479.98px;
+
+/*     variables          */
+
+$fw300: 300;
+$fw400: 400;
+$fw500: 500;
+$fw700: 700;
+$fz22: 22px;
+$fz14: 14px;
+$fz24: 24px;
+$fz16: 16px;
+$fz12: 12px;
+$fz64: 64px;
+$BackgroundDarkest: rgb(51, 51, 51);
+$BackgroundWhite: rgb(251, 251, 251);
+
+$colorGrey1: rgb(51, 51, 51);
+$colorGrey4: rgb(189, 189, 189);
+$colorWhite: rgb(255, 255, 255);
+$colorDark: rgb(0, 0, 0);
+/*================================*/
+//
+
+@mixin titleAndLogo($fz: $fz16, $fw: $fw400, $color: $colorGrey1) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+}
+
+// @mixin button($bg: $BackgroundDarkest, $color: $colorDark) {
+//     color: $color;
+//     background-color: $bg;
+//     padding: 11px 35px;
+//     border-radius: 30px;
+//     transition: all 0.3s ease 0s;
+// }
+// .button-yellow {
+//     @include button();
+
+//     &:hover {
+//         @include button($colorDark);
+//         color: #fff;
+//     }
+// }
+// .button-dark {
+//     @include button($colorDark, $colorWhite);
+//     &:hover {
+//         @include button($BackgroundYellow);
+//     }
+// }
+
+// .logo {
+//     @include titleAndLogo($fz32, $fw500, $colorWhite);
+// }
+
+// .title-big {
+//     @include titleAndLogo($fz54, $fw600, $colorWhite);
+// }
+// .title-black {
+//     @include titleAndLogo($fz32, $fw500, $colorDark);
+//     @media (max-width: $mobileSmall) {
+//         @include titleAndLogo($fz18, $fw500, $colorDark);
+//     }
+// }
+
+// .title {
+//     @include titleAndLogo();
+//     @media (max-width: $mobileSmall) {
+//         @include titleAndLogo($fz18);
+//     }
+// }
+
+// .visual-hidden {
+//     display: none;
+// }

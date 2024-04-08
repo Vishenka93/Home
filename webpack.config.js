@@ -18,6 +18,7 @@ module.exports = {
         open: true,
         hot: true,
         historyApiFallback: true,
+        liveReload: false,
     },
     module: {
         rules: [
@@ -37,8 +38,14 @@ module.exports = {
             template: path.resolve(__dirname, "src/index.html"),
             filename: "index.html",
         }),
+        new HTMLWebpackPlugins({
+            template: path.resolve(__dirname, "src/pro-1.html"),
+            filename: "pro-1.html",
+        }),
         new CopyWebpackPlugin({
-            patterns: [{ from: "src/assets", to: "assets" }],
+            patterns: [
+                { from: "src/assets", to: "assets", noErrorOnMissing: true },
+            ],
         }),
     ],
 };

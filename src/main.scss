@@ -1,0 +1,790 @@
+@import "./base.scss";
+
+.page-home {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    @media (max-width: $tablet) {
+        padding-bottom: 80px;
+    }
+    @media (max-width: $mobile) {
+        padding-bottom: 10px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            // display: block;
+        }
+    }
+
+    &__content {
+        flex: 0 0 223px;
+        position: relative;
+        @media (max-width: $mobile) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        line-height: 64px;
+        padding-right: 122px;
+        margin-bottom: 90px;
+        @include titleAndLogo($fz64, $fw300);
+        span {
+            @include titleAndLogo($fz64, $fw700);
+            @media (max-width: $tablet) {
+                padding-right: 62px;
+                @include titleAndLogo(44px, $fw700);
+            }
+            @media (max-width: $mobile) {
+                @include titleAndLogo(24px, $fw700);
+                padding-right: 0px;
+            }
+        }
+
+        @media (max-width: $tablet) {
+            padding-right: 62px;
+            margin-bottom: 60px;
+            @include titleAndLogo(44px, $fw300);
+            text-align: center;
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(24px, $fw300);
+            padding-right: 0px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__nav {
+        position: relative;
+        top: 100%;
+        margin-bottom: 110px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $mobile) {
+            top: 0;
+            margin-bottom: 20px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            height: 53px;
+            color: $colorDark;
+            width: 53px;
+            background: rgb(196, 196, 196, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            background: rgb(173, 216, 230);
+        }
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            display: none;
+        }
+
+        .swiper-button-next {
+            left: 25%;
+            @media (max-width: $mobile) {
+                left: 90%;
+            }
+        }
+        .swiper-button-prev {
+            .fa-arrow-right {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__slide-info {
+        display: flex;
+        align-items: start;
+
+        //   letter-spacing: 3px;
+    }
+    &__current-slide {
+        padding-right: 20px;
+    }
+    &__total-slides {
+        padding-left: 20px;
+    }
+    &__swiper {
+        flex: 1 1 770px;
+        width: 0;
+        @media (max-width: $mobile) {
+            width: 100%;
+            max-height: 400px;
+            flex: 1 1 auto;
+        }
+    }
+    .fa-arrow-right {
+        font-size: 24px;
+    }
+}
+
+.swiper {
+    width: 100%;
+}
+.swiper-wrapper {
+    width: 100%;
+}
+.swiper-slide {
+    position: relative;
+
+    img {
+        @media (max-width: $mobile) {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+    }
+
+    a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 221px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        @include titleAndLogo($fz12, $fw400, $colorGrey1);
+        background: $BackgroundWhite;
+        span {
+            padding-right: 12px;
+        }
+    }
+    a:hover {
+        transition: all 0.3s ease 0s;
+        background: rgb(173, 216, 230);
+    }
+}
+.swiper-pagination {
+    @include titleAndLogo($fz24, $fw400, $colorGrey4);
+    text-align: left;
+
+    @media (max-width: $mobile) {
+        text-align: center;
+        //   max-width: 0 -30px 0;
+    }
+}
+.swiper-pagination-current {
+    padding-right: 30px;
+}
+
+.swiper-pagination-total {
+    padding-left: 30px;
+}
+
+/*==========================================ABout=======================================*/
+
+.page-about {
+    &__container {
+        display: flex;
+        background: $BackgroundWhite;
+        justify-content: space-evenly;
+        gap: 30px;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 68px;
+        @media (max-width: $tablet) {
+            gap: 15px;
+            align-items: center;
+            padding-left: 100px;
+            padding-right: 68px;
+        }
+        @media (max-width: $mobile) {
+            order: 1;
+            flex-wrap: wrap;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: $mobile) {
+            order: 3;
+            flex-direction: row;
+        }
+    }
+
+    &__top {
+        max-width: 270px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__bottom {
+        max-width: 270px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__middle {
+        max-width: 270px;
+
+        @media (max-width: $mobile) {
+            order: 2;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        width: 400px;
+        @media (max-width: $mobile) {
+            order: 1;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        @include titleAndLogo($fz64, $fw300, $colorGrey4);
+        margin-bottom: 20px;
+        @media (max-width: $tablet) {
+            @include titleAndLogo(44px, $fw300, $colorGrey4);
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(24px, $fw300, $colorGrey4);
+            text-align: center;
+        }
+    }
+
+    &__text {
+        @include titleAndLogo($fz16, $fw300, $colorDark);
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+
+    &__link {
+        width: 222px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease 0s;
+        background: $colorWhite;
+        span {
+            @include titleAndLogo($fz12, $fw400, $colorGrey1);
+            padding-right: 15px;
+            line-height: 12px;
+            letter-spacing: 2px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    &__link:hover {
+        transition: all 0.3s ease 0s;
+        background: rgb(173, 216, 230);
+    }
+}
+.fa-solid {
+}
+.fa-arrow-right {
+    font-size: 24px;
+    color: $colorDark;
+}
+
+/*===================================================tasks==========================================*/
+
+.page-tasks {
+    padding-top: 120px;
+    @media (max-width: $tablet) {
+        padding-top: 60px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 10px;
+    }
+
+    &__container {
+    }
+
+    &__title {
+        @include titleAndLogo($fz64, $fw300, $colorGrey4);
+        line-height: 64px;
+        margin-bottom: 60px;
+        @media (max-width: $tablet) {
+            @include titleAndLogo(44px, $fw300, $colorGrey4);
+            margin-bottom: 40px;
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(24px, $fw300, $colorGrey4);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: end;
+        @media (max-width: $tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__number {
+        font-size: 200px;
+        line-height: 140px;
+        color: rgb(242, 242, 242);
+        margin-right: 30px;
+        //   width: 30px;
+        @media (max-width: $tablet) {
+            font-size: 100px;
+            line-height: 80px;
+            min-width: 40px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 80px;
+            line-height: 60px;
+            min-width: 40px;
+        }
+    }
+
+    &__text {
+        @include titleAndLogo($fz22, $fw400, $colorGrey1);
+        line-height: 36px;
+        max-width: 279px;
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            line-height: 36px;
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo($fz16, $fw400, $colorGrey1);
+            line-height: 16px;
+        }
+    }
+    &__text-2 {
+        max-width: 420px;
+        @include titleAndLogo($fz22, $fw400, $colorGrey1);
+        line-height: 36px;
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo($fz16, $fw400, $colorGrey1);
+            line-height: 16px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: end;
+    }
+}
+
+/*==============================================project===========================================*/
+
+.page-projects {
+    padding-top: 120px;
+
+    @media (max-width: $tablet) {
+        padding-top: 80px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 30px;
+    }
+    &__container {
+    }
+
+    &__all-link {
+        display: flex;
+        width: 100%;
+        justify-content: end;
+    }
+    &__all {
+        position: relative;
+        right: 0;
+        transition: all 0.3s ease 0s;
+        width: 222px;
+        height: 71px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $colorDark;
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+        span {
+            @include titleAndLogo($fz12, $fw400, $colorWhite);
+            padding-right: 15px;
+            line-height: 12px;
+            letter-spacing: 2px;
+        }
+        .fa-arrow-right {
+            color: $colorWhite;
+        }
+    }
+    &__all:hover {
+        transition: all 0.3s ease 0s;
+        background: rgb(173, 216, 230);
+    }
+    &__title {
+        @include titleAndLogo($fz64, $fw300, $colorGrey4);
+        margin-bottom: 60px;
+        @media (max-width: $tablet) {
+            @include titleAndLogo(44px, $fw300, $colorGrey4);
+            margin-bottom: 30px;
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(24px, $fw300, $colorGrey4);
+            margin-bottom: 30px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__top-left {
+        flex: 0 1 50%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        @media (max-width: $tablet) {
+            flex: 0 1 570px;
+        }
+
+        img {
+            width: 100%;
+            height: 255px;
+            object-fit: cover;
+            @media (max-width: $tablet) {
+                height: 100%;
+            }
+        }
+        &:hover .page-projects__info {
+            top: 0; // при наведении убираем отступ сверху
+            transition: all 0.5s ease 0s;
+        }
+    }
+
+    &__top-right {
+        flex: 0 1 50%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        @media (max-width: $tablet) {
+            flex: 0 1 570px;
+        }
+
+        img {
+            width: 100%;
+            height: 255px;
+            z-index: 1;
+            object-fit: cover;
+            @media (max-width: $tablet) {
+                height: 100%;
+            }
+        }
+        &:hover .page-projects__info {
+            top: 0; // при наведении убираем отступ сверху
+            transition: all 0.3s ease 0s;
+        }
+    }
+    &__info {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 48px;
+        padding-left: 79px;
+        background: rgba(128, 128, 128, 0.519);
+
+        z-index: 2;
+        transition: all 0.3s ease 0s;
+        @media (max-width: $mobile) {
+            padding-top: 28px;
+            padding-left: 39px;
+        }
+    }
+    &__info-small {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 48px;
+        padding-left: 9px;
+
+        background: rgba(128, 128, 128, 0.519);
+
+        z-index: 2;
+        transition: all 0.3s ease 0s;
+        @media (max-width: 1100px) {
+            padding-left: 20px;
+        }
+    }
+
+    &__info-title {
+        @include titleAndLogo($fz64, $fw700, $colorWhite);
+        position: relative;
+        z-index: 10;
+        @media (max-width: 1100px) {
+            @include titleAndLogo(34px, $fw700, $colorWhite);
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(16px, $fw700, $colorWhite);
+        }
+    }
+
+    &__info-link {
+        @include titleAndLogo($fz12, $fw400, $colorWhite);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        span {
+            padding-right: 15px;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        gap: 30px;
+
+        //   flex-wrap: wrap;
+        margin-bottom: 30px;
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+
+    &__bottom-left {
+        width: 100%;
+        height: 100%;
+        flex: 0 1 23%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        order: 1;
+        @media (max-width: $tablet) {
+            flex: 0 1 255px;
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 0 1 200px;
+        }
+        img {
+            width: 100%;
+            height: 255px;
+            z-index: 1;
+            object-fit: cover;
+            @media (max-width: $tablet) {
+                height: 100%;
+            }
+        }
+        &:hover .page-projects__info-small {
+            top: 0; // при наведении убираем отступ сверху
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    &__bottom-middle {
+        width: 100%;
+        height: 100%;
+        flex: 0 1 41.2%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        order: 3;
+
+        @media (max-width: $tablet) {
+            flex: 0 1 470px;
+        }
+        img {
+            width: 100%;
+            height: 255px;
+            z-index: 1;
+            object-fit: cover;
+            @media (max-width: $tablet) {
+                height: 100%;
+            }
+        }
+        &:hover .page-projects__info {
+            top: 0; // при наведении убираем отступ сверху
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+    &__bottom-right {
+        width: 100%;
+        height: 100%;
+        flex: 0 1 33%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        order: 2;
+        @media (max-width: $tablet) {
+            flex: 0 1 370px;
+        }
+        img {
+            width: 100%;
+            height: 255px;
+            z-index: 1;
+            object-fit: cover;
+            @media (max-width: $tablet) {
+                height: 100%;
+            }
+        }
+        &:hover .page-projects__info {
+            top: 0; // при наведении убираем отступ сверху
+            transition: all 0.3s ease 0s;
+        }
+    }
+}
+
+/*=============================================Contacts====================================*/
+
+.page-contacts {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    @media (max-width: $mobile) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    &__container {
+    }
+    &__title {
+        @include titleAndLogo($fz64, $fw300, $colorGrey4);
+        margin-bottom: 22px;
+        @media (max-width: $tablet) {
+            @include titleAndLogo(44px, $fw300, $colorGrey4);
+        }
+        @media (max-width: $mobile) {
+            @include titleAndLogo(24px, $fw300, $colorGrey4);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        gap: 30px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    &__form {
+        max-width: 391px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
+        // position: relative;
+    }
+    &__input {
+        height: 46px;
+        padding: 0 15px;
+        width: 100%;
+        background: rgb(243, 243, 243);
+        @include titleAndLogo(14px, $fw400, rgb(141, 141, 141));
+        letter-spacing: 1px;
+    }
+
+    :focus {
+        box-shadow: 0 0 15px $colorGrey1;
+    }
+    textarea {
+        min-height: 147px;
+        padding: 14px 20px;
+        resize: vertical;
+    }
+
+    &__text {
+        @include titleAndLogo(14px, $fw400, $colorDark);
+        line-height: 16px;
+        letter-spacing: 1px;
+        padding-left: 40px;
+        margin-bottom: 23px;
+    }
+
+    &__button {
+        width: 222px;
+        height: 71px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $colorGrey1;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        span {
+            @include titleAndLogo($fz12, $fw400, $colorWhite);
+            padding-right: 15px;
+            line-height: 12px;
+            letter-spacing: 2px;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+        .fa-arrow-right {
+            color: $colorWhite;
+        }
+    }
+    &__button:hover {
+        transition: all 0.3s ease 0s;
+        background: rgb(173, 216, 230);
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 369px;
+            object-fit: cover;
+        }
+    }
+}
+.fa-solid {
+}
+.fa-arrow-right {
+}
+
+/*   validation*/
+
+.error {
+    box-shadow: 0 0 15px red;
+}
+
+// sending
