@@ -73,11 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 form.reset();
                 form.classList.remove("sending");
             } else {
-                alert("Error");
+                alert("Поля заполнены");
                 form.classList.remove("sending");
             }
         } else {
-            alert("заполните обязательно поле");
+            alert("Заполните обязательно поля");
         }
     }
 
@@ -109,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function formAddError(input) {
         input.classList.add("error");
         // input.classList.remove("error");
-        console.log("fadas");
     }
 
     function formRemoveError(input) {

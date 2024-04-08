@@ -28,7 +28,7 @@ export function anim() {
             scrollTrigger: {
                 trigger: ".page-about",
 
-                start: " 70% centre",
+                start: " 80% centre",
                 end: " +=200px",
                 scrub: true,
             },
@@ -56,7 +56,6 @@ export function anim() {
         {
             scrollTrigger: {
                 trigger: ".page-projects",
-                markers: true,
                 start: " 120% centre",
                 // end: " +=400px",
                 scrub: true,
@@ -66,4 +65,26 @@ export function anim() {
             duration: 1.5,
         }
     );
+    gsap.from(" .page-contacts__title, .page-contacts__body", {
+        scrollTrigger: {
+            trigger: ".page-contacts",
+            start: " 70% centre",
+            end: " +=100px",
+            scrub: true,
+        },
+        opacity: 0,
+        stagger: 1,
+        duration: 1.5,
+    });
+    gsap.from(" .footer", {
+        scrollTrigger: {
+            trigger: ".footer",
+            start: " bottom centre",
+            end: " +=510px",
+            scrub: true,
+        },
+        opacity: 0,
+        stagger: 1,
+        duration: 1.5,
+    });
 }
